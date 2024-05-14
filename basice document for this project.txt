@@ -17,3 +17,29 @@ import speech_recognition # THIS PACKAGE IS USED FOR THE SPEECH RECOGINAZATION I
 import pyttsx3 THIS IS FOR VOICE OF SPEECH
 import mysql.connector #THIS IS FOR DATABASE CONNECTIVITY
 import distutils # TO INSTALL THIS PACKAGE WE NEED WRITE LIKE THIS PIP INSTAL setuptools
+
+
+
+to work the voice to voice offline you need to install the package vosk
+ex:pip install vosk
+
+to download this package you need to download from the apachi 
+Please download the model from https://alphacephei.com/vosk/models and unpack as 'model' in the current folder.
+i have mentioned this link programm if not availale it show the reference to download 
+after download you need to place this module where your progamm file is there
+
+
+here the more clear information for you :
+To modify the code to work with voice-to-voice interaction without relying on the internet, you can use the offline speech recognition library, Vosk. Here’s how you can do it:
+
+Install the necessary libraries: Vosk, pyaudio, and pyttsx3.
+sh
+Copy code
+pip install vosk pyaudio pyttsx3 mysql-connector-python
+Download a Vosk model for offline speech recognition from Vosk Models. For example, the small model for English is sufficient for many tasks: vosk-model-small-en-us-0.15.
+
+Extract the downloaded model to a directory of your choice.
+
+Modify the provided Python script to use Vosk for offline speech recognition.
+
+Here is the updated script with these changes:
