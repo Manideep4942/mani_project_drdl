@@ -1,0 +1,19 @@
+Step 1: Install the distutils package
+
+Open a terminal or command prompt.
+Run the following command to install distutils:
+
+
+pip install setuptools this package is used for the voice taking input but in the code 
+we dont use this a like import setuptools insted of this we use:
+import distutils
+
+
+
+STEP1: NEED TO INSTALL THE PACKAGES TO RUN THE CODE :
+import tkinter 
+from tkinter import messagebox
+import speech_recognition # THIS PACKAGE IS USED FOR THE SPEECH RECOGINAZATION IN PROGRAMM
+import pyttsx3 THIS IS FOR VOICE OF SPEECH
+import mysql.connector #THIS IS FOR DATABASE CONNECTIVITY
+import distutils # TO INSTALL THIS PACKAGE WE NEED WRITE LIKE THIS PIP INSTAL setuptools
