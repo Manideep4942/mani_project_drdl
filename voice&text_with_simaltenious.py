@@ -1,5 +1,6 @@
 import os
 import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox
 import pyttsx3
 import mysql.connector
@@ -106,6 +107,7 @@ root.title("DRDL Question Bank")
 root.geometry("1200x600")
 root.configure(bg="#f0f0f0")
 
+
 # Create frame
 frame = tk.Frame(root, bg="#f0f0f0")
 frame.pack(pady=20)
@@ -115,8 +117,11 @@ text_label = tk.Label(frame, text="Enter your question:", font=("Arial", 12), bg
 text_label.grid(row=0, column=0, padx=10, pady=10)
 
 # Create text entry
-text_entry = tk.Entry(frame, width=50, font=("Arial", 12))
+
+options = ["what is Astra?", "What is a database", "What is python", "What is a laptop?"]
+text_entry = ttk.Combobox(frame, values=options,width=50, font=("Arial", 12))
 text_entry.grid(row=0, column=1, padx=10, pady=10)
+
 
 # Create buttons
 text_button = tk.Button(frame, text="Ask (Text)", command=handle_text_input, font=("Arial", 12), bg="#4CAF50", fg="white")
@@ -126,7 +131,7 @@ voice_button = tk.Button(frame, text="Ask (Voice)", command=handle_voice_input, 
 voice_button.grid(row=2, column=0, columnspan=2, pady=10, padx=5, sticky="ew")
 
 # Create label for displaying result
-result_label = tk.Label(root, text="", font=("Arial", 14), wraplength=500, justify="center", bg="#f0f0f0")
+result_label = tk.Label(root, text="", font=("TimesNewRoman", 15), wraplength=800, justify="center", bg="#f0f0f0")
 result_label.pack(pady=20)
 
 # Initialize speech recognition and text-to-speech engines
